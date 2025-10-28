@@ -4,11 +4,12 @@ int i;
 %}
 %%
 [a-zA-Z]* {for(i=0;i<=yyleng;i++){
-if((yytext[i]=='a')&&(yytext[i+1]=='b')&&(yytext[i+2]=='c'))
+if((yytext[i]=='c')&&(yytext[i+1]=='o')&&(yytext[i+2]=='m')&&(yytext[i+3]=='p'))
 {
-yytext[i]='A';
-yytext[i+1]='B';
-yytext[i+2]='C';
+yytext[i]='C';
+yytext[i+1]='O';
+yytext[i+2]='M';
+yytext[i+3]='P';
 }
 }
 printf("%s",yytext);
@@ -22,4 +23,3 @@ int main()
 printf("enter the string");
 yylex();
 }
-
